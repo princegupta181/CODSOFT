@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            width: 100%;
+            height: 200vh;
+            background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)) ,url(images/img.webp);
+            background-size: cover;
+        }
+        nav{
+            width: 100%;
+            height: 100px;
+            color: rgb(196, 11, 97);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .Title{
+            font-size:  2em;
+            letter-spacing: 2px;
+        }
+        .menu a{
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 20px;
+            position: relative;
+        }
+        .menu a:before{
+            content: '';
+            position:absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            border-bottom: 2px solid indianred;
+            transition: 0.5s linear;
+
+        }
+        .menu a:hover:before{
+            width: 90%;
+            color:rgb(11, 143, 196) ;
+        }
+        .menu a:hover{
+            color: red;
+        }
+        
+        .register a{
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 30px;
+            background: rgb(11, 143, 196);
+            border-radius: 8px;
+
+        }
+        .register a:hover{
+            background: red;
+            border: 1px solid rgb(11, 143, 196);
+            transition: 0.5s;
+        }
+        .headertext{
+            max-width: 800px;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+
+        }
+        .headertext span{
+            letter-spacing: 5px;
+            font-size: 40px;
+        }
+        .headertext h1{
+            font-size: 3.5em;
+        }
+        .headertext a{
+            text-decoration:none;
+            color: white;
+            background: rgb(11, 143, 196);
+            padding: 10px 20px;
+            letter-spacing: 5px;
+        }
+        .headertext a:hover{
+            background: transparent;
+            border: 1px solid indianred;
+            transition: 0.5s;
+        }
+        .Aboutus p{
+            color: white;
+        }
+        .Aboutus a{
+            text-decoration: none;
+            color: blue;
+            background-color: white;
+        }
+        footer{
+            overflow: hidden;
+            background-color: #333;
+        }
+        footer a{
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            float: left;
+        }
+        footer a:hover{
+            color: red;
+        }
+        .copyright{
+            float: right;
+        }
+         
+            
+        
+    
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="Title">
+                Destiny-Travel
+
+            </div>
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">Honeymoon Sites</a>
+                <a href="#">Hill stations</a>
+                <a href="#">Seasonal offers</a>
+                <a href="#">Visit site</a>
+                <a href="#">Customer reviews</a>
+            </div>
+            <div class="register">
+                <a href="#">Register</a>
+
+            </div>
+        </nav>
+        </header>
+        <main>
+        <section class="headertext">
+            <span>Enjoy</span>
+            <h1>World's Best Travel Agency</h1>
+
+            <br>
+            <a href="#">Book your Destiny Now</a>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <section class="Aboutus">
+                <h1>
+                    About us
+                </h1>
+                <p >Welcome to our premier travel agency, where wanderlust meets meticulous planning! With a passion for crafting extraordinary journeys, we are your dedicated partners in curating unforgettable travel experiences. Our team of seasoned explorers and travel aficionados are committed to turning your dreams into reality, tailoring each itinerary to your unique preferences and interests. From luxurious getaways to thrilling adventures, we meticulously handle every detail – from flights and accommodations to local activities and insider recommendations. Embark on a seamless voyage of discovery with us, and let the world become your playground. Your journey begins here, where adventure knows no bound!
+                    
+                </p>
+                <h2>
+                    our founder
+                </h2>
+                <img src="images/founder.jpg" alt="" width="40%" height="40%">
+                <h3>Mr XYZ</h3>
+                <a href="https://www.youtube.com">Youtube</a>
+                <a href="https://www.instagrma.com">Instagram</a>
+                <a href="https://www.google.com">Google</a>
+                <h4>I am Mr XYZ founder of the Destiny travel agency </h4>
+                
+            </section>
+        </main>
+        <footer>
+            <a href="#">FAQ</a>&nbsp;
+            <a href="#">Contact us</a>&nbsp;
+            <a href="#">Terms of use</a>&nbsp;
+            <a href="#">Privacy Policy</a>&nbsp;
+            <a href="#">Refund Policy</a>&nbsp;
+            <a class="copyright" href="#">&copy; 2023 | Destiny-Travel</a>
+        </footer>
+</body>
+</html>

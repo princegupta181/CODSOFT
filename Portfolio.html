@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+        body{
+            background: #080808;
+            color: #fff;
+       }
+       #header{
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+       }
+       .logo::first-letter{
+        font-size: 200%;
+        color: red;
+ }
+ .logo{
+    width: 200px;
+    font-size: 4em;
+    letter-spacing: 2px;
+ }
+ 
+ .tag{
+    padding: 10px 10%;
+ }
+ nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+
+ }
+ .prince{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+ }
+ 
+ nav ul li{
+      display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+    
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 5px;
+}
+.header-text span{
+    color: #ff004f;
+}
+#about{
+    padding: 80px;
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+     flex-basis: 60%;
+
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content:'';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul  li  span{
+    color: #b54769;;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+#services{
+    padding: 30px 0;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div:hover{
+    background: #ff004f;
+    transform: translateY(-10px);
+
+}
+#portfolio{
+    padding: 50px 0;
+
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align:center;
+    font-size: 14px; 
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.work:hover img{
+    transform:scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #ff004f;
+}
+.contactme{
+    flex-basis: 35%;
+}
+.contactme p{
+    margin-top: 30px;
+}
+.social-media{
+    display: flex;
+}
+.social-media a{
+    color: rgb(0, 132, 255);
+    transition: transform 0.5s;
+}
+.social-media a:hover{
+    color: red;
+    transform: translateY(-5px)
+}
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.btn2:hover{
+    background: rgb(124, 117, 224);
+}
+       
+       
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+           <b>Prince.</b>
+        </div>
+        <div class="container">
+            <nav>
+                <ul>    
+               <li><a href="#">Home</a></li>
+               <li> <a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+                
+               </ul>
+            </nav>
+            <div class="header-text">
+                <p class="tag">Front End  Web developer</p>
+                <h1 class="tag">Hi, I'm <span>Prince Gupta</span></h1>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/profile.jpeg" alt="" width="450" height="500">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am Prince Gupta and I am 20 years old. Currently I am a student of Btech in Computer Science and Engineering from IPU university GGSIPU. I love to learn new things .so, I am learning Web development course and I am an intern at CODSOFT.
+                        I love to code and currently working on Front End Web Development  </p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>HTML</span><br>Desigining web interfaces</li>
+                                <li><span>CSS</span><br>Desigining web pages</li>
+                                <li><span>JAVASCRIPT</span><br>Front End Web Development</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2023 - current</span><br>Front End Web development</li>
+                                <li><span>2023 - current</span><br>Internship at  CODSOFT</li>
+                            </ul>
+
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <li><span>2023</span><br>Btech CSE from GGSIPU USICT</li>
+                            <li><span>2021</span><br>BSC in chemistry hons from DELHI UNIVERSITY</li>
+                            <li><span>2018</span><br>INTERMEDIATE</li>
+                            <li><span>2016</span><br>Matriculation</li>
+
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------services-->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+               <div>
+                <h2>WEB DESIGN</h2>
+                <p>I am a beginner in App Design. so I can make basics level of web design</p>
+                <a href="#">Learn more</a>
+               </div>
+               <div>
+                <h2>App Design</h2>
+                <p>currently i am learning app design</p>
+                <a href="#">Learn more</a>
+
+             </div>
+            </div>
+        </div>
+    </div>
+    <!-----------portfolio----->
+    <div id="Portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+             <div class="work-list">
+            <div class="work">
+                <img src="images/work1.png" alt="" width="400" height="500">
+                <div class="layer">
+                    <h3>Landing Page</h3>
+                    <p>This Landing Page is for a travel company. You can register and book your destination anywhere in the world</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work2.png" alt="" width="400" height="500">
+                <div class="layer">
+                    <h3>Calculator</h3>
+                    <p>This is a simple calculator. You can perform basic functions like- Addition,subtraction,division and multiplication . </p>
+        
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work3.jpg" alt="" width="400" height="500">
+                <div class="layer">
+                <h3>Portfolio</h3>
+                <p>This is Portfolio of a company. This  portfolio contains about the company and its upcoming projects</p>
+                </div>
+            </div>
+            </div>
+            <a  href="#" class="btn">See more</a>
+        </div>
+    </div>
+    <!--------contact---->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contactme">
+                    <h1>Contact Me</h1>
+                    <p>Email id - pg07102002@gmail.com</p>
+                    <p>Phone no. - 8882052754</p>&nbsp;
+                    <div class="social-media">
+                        <a href="https://www.instagram.com/princegupta181">Instagram</a>&nbsp;&nbsp;
+                        <a href="https://www.google.com">Google</a>&nbsp;&nbsp;
+                        <a href="https://www.LinkedIn.com/Prince gupta">LinkedIn</a>
+                    </div>
+                    <a href="images/Resume.pdf"Download class="btn btn2">Download Resume</a>
+                </div>
+
+            </div>
+            <div class="copyright">
+                <p>Copyright @ Prince Gupta</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+    
+</body>
+</html>
